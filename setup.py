@@ -8,7 +8,7 @@ setup(
     author='Michael Sanchez, Search Engineer @lucidworks',
     author_email='superlinux.michael5@gmail.com',
     license='GPLv3',
-    packages=['solr_troubleshooting_framework'],
+    packages=['solr_troubleshooting'],
     install_requires=[
         'requests',
     ],
