@@ -8,7 +8,8 @@ setup(
     author='Michael Sanchez, Search Engineer @lucidworks',
     author_email='superlinux.michael5@gmail.com',
     license='GPLv3',
-    packages=['stsf/'],
+    package_dir=['solr_troubleshotting'],
+    packages=['stsf'],
     install_requires=[
         'requests',
     ],
