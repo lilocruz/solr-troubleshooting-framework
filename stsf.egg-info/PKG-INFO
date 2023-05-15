@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: stsf
+Version: 0.1
+Summary: A simple but useful Apache Solr troubleshooting framework to start debuggin Apache Solr installation and settings issues.
+Home-page: https://github.com/lilocruz/solr-troubleshooting-framework
+Author: Michael Sanchez, Search Engineer @lucidworks
+Author-email: superlinux.michael5@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+
+UNKNOWN
+
