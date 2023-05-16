@@ -1,0 +1,12 @@
+__init__.py
+setup.py
+__pycache__/__init__.cpython-310.pyc
+__pycache__/solr_troubleshooting.cpython-310.pyc
+__pycache__/stsf.cpython-310.pyc
+stsf/stsf.py
+stsf.egg-info/PKG-INFO
+stsf.egg-info/SOURCES.txt
+stsf.egg-info/dependency_links.txt
+stsf.egg-info/requires.txt
+stsf.egg-info/top_level.txt
+test/test.py

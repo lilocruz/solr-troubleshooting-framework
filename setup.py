@@ -18,7 +18,6 @@ setup(
         "Development Status :: 3 - Alpha",
         "Intended Audience :: System Administrators",
         "Intended Audience :: Developers",
-        "Intended Audience :: Research",
         "Operating System :: POSIX :: Linux",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Programming Language :: Python :: 3",
