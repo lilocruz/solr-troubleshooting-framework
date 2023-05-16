@@ -1,14 +1,14 @@
 from setuptools import setup
 
 setup(
-    name='solr-troubleshooting',
+    name='stsf',
     version='0.1',
-    description='A Solr troubleshooting framework',
-    url='https://github.com/yourusername/solr-troubleshooting',
-    author='Your Name',
-    author_email='your.email@example.com',
-    license='MIT',
-    packages=['solr_troubleshooting'],
+    description='A simple but useful Apache Solr troubleshooting framework to start debuggin Apache Solr installation and settings issues.',
+    url='https://github.com/lilocruz/solr-troubleshooting-framework',
+    author='Michael Sanchez, Search Engineer @lucidworks',
+    author_email='superlinux.michael5@gmail.com',
+    license='GPLv3',
+    packages=['stsf'],
     install_requires=[
         'requests',
     ],
