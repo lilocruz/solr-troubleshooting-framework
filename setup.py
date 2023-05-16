@@ -1,17 +1,27 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
-    name='Stsf',
-    version='0.1',
-    description='A simple but useful Apache Solr troubleshooting framework to start debuggin Apache Solr installation and settings issues.',
+    name="stsf",
+    version="0.1",
     url='https://github.com/lilocruz/solr-troubleshooting-framework',
-    author='Michael Sanchez, Search Engineer @lucidworks',
-    author_email='superlinux.michael5@gmail.com',
+    author="Michael Cruz Sanchez",
+    author_email="superlinux.michael5@gmail.com",
     license='GPLv3',
-    package_dir=['solr_troubleshotting'],
-    packages=['stsf'],
+    description="A Python module for troubleshooting Apache Solr installations",
+    packages=find_packages(),
     install_requires=[
         'requests',
     ],
-    zip_safe=False
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers / Solr & Python Enthusiasts",
+        "Operating System :: POSIX :: Linux",
+        "License :: OSI Approved :: GPLv3 License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+    ],
 )
