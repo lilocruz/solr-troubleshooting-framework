@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="stsf",
+    name="Solr-troubleshooting-framework",
     version="0.1",
     url='https://github.com/lilocruz/solr-troubleshooting-framework',
     author="Michael Cruz Sanchez",

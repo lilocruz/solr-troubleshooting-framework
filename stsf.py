@@ -1,40 +1,62 @@
-# This is the actual program that does the debugging. It imports the "solr_troubleshooting" module.
+# This is the first fuction of an Apache Solr troubleshooting framework that i'm creating.
+# Right now the script is not very mature!!.
+# Copytright: GPLv3
+# AUTHOR: Michael Sanchez (Search Engineer at Lucidworks)
 
-import solr_troubleshooting
+import requests
 
-# Set up Solr URL and core name
-solr_url = input("Enter your Solr URL in the format of (http://URL:PORT/solr): ")
-core_name = input("Enter your Solr core name: ")
+def check_solr_ping(solr_url):
+    # Will check if solr is up & running
+    try:
+        response = requests.get(solr_url + "/admin/ping", timeout=5)
+        if response.status_code == 200:
+            return True
+    except:
+        pass
+    return False
 
-# Run diagnostic ping checks
-if not solr_troubleshooting.check_solr_ping(solr_url + "/" + core_name):
-    print("Solr server is not responding.")
-else:
-    print("Up & Running!")
+# Core check function
+def check_solr_core(solr_url, core_name):
+    # Check if the core exists
+    try:
+        response = requests.get(solr_url + "/admin/cores?action=STATUS&core=" + core_name, timeout=5)
+        if response.status_code == 200:
+            return True
+    except:
+        pass
+    return False
 
-# Check Core
-if not solr_troubleshooting.check_solr_core(solr_url, core_name):
-    print(f"Solr core '{core_name}' does not exist.")
-else:
-    print(f"The Core {core_name} was found!")
+# Query check function
+def check_solr_query(solr_url, query):
+    # Check if a Solr query returns any results
+    try:
+        response = requests.get(solr_url + "/select?q=" + query, timeout=5)
+        if response.status_code == 200:
+            response_json = response.json()
+            if response_json["response"]["numFound"] > 0:
+                return True
+    except:
+        pass
+    return False
 
-# Check Query
-if not solr_troubleshooting.check_solr_query(solr_url + "/" + core_name, "*:*"):
-    print("Solr query did not return any results.")
-else:
-    print("The query was succesful!")
+# Field check function
+def check_solr_field(solr_url, core_name, field_name):
+    # Check if a Solr core has a field
+    try:
+        response = requests.get(solr_url + "/" + core_name + "/schema/fields/" + field_name, timeout=5)
+        if response.status_code == 200:
+            return True
+    except:
+        pass
+    return False
 
-# Check Field    
-if not solr_troubleshooting.check_solr_field(solr_url, core_name, "my_field"):
-    print(f"Solr core '{core_name}' does not have the 'my_field' field.")
-else:
-    print(f"Solr core '{core_name}' does have the 'my_field' field.")
-
-# Check logs, note that the path for the log might vary.    
-if not solr_troubleshooting.check_solr_log("server/logs/solr.log", "Error: Could not create index"):
-    print("The Error: Could not create index' message not found in the Solr logs.")
-else:
-    print("The error was found in the solr logs!")
-
-# If no errors were found, print success message
-print("Solr installation is working correctly!!! Happy Solring.")
+# Log check function
+def check_solr_log(solr_log_path, error_message):
+    # Check if a specific error message appears in the Solr log file
+    try:
+        with open(solr_log_path, "r") as log_file:
+            log_text = log_file.read()
+            if error_message in log_text:
+                return True
+    except:
+        pass
