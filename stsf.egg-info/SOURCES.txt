@@ -4,6 +4,7 @@ stsf.py
 __pycache__/solr_troubleshooting.cpython-310.pyc
 __pycache__/stsf.cpython-310.pyc
 stsf.egg-info/PKG-INFO
+stsf.egg-info/README.rst
 stsf.egg-info/SOURCES.txt
 stsf.egg-info/dependency_links.txt
 stsf.egg-info/requires.txt
