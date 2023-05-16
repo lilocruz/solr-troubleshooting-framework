@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="stsf",
-    version="0.1",
+    version="0.1.0",
     url='https://github.com/lilocruz/solr-troubleshooting-framework',
     author="Michael Cruz Sanchez",
     author_email="superlinux.michael5@gmail.com",

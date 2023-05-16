@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: stsf
-Version: 0.1
+Version: 0.1.0
 Summary: A Python module for troubleshooting Apache Solr installations
 Home-page: https://github.com/lilocruz/solr-troubleshooting-framework
 Author: Michael Cruz Sanchez
