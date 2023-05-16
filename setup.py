@@ -3,13 +3,13 @@ from setuptools import find_packages
 
 setup(
     name="stsf",
-    version="0.1.6",
+    version="0.1.9",
     url='https://github.com/lilocruz/solr-troubleshooting-framework',
     author="Michael Cruz Sanchez",
     author_email="superlinux.michael5@gmail.com",
     license='GPLv3',
     description="A Python module for troubleshooting Apache Solr installations",
-    keywords=["Solr", "Python", "Troubleshoot", "Framework"],
+    keywords=["Solr", "Python", "Troubleshoot", "Framework", "lilocruz"],
     packages=find_packages(),
     install_requires=[
         'requests',

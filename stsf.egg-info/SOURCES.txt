@@ -1,8 +1,5 @@
-__init__.py
 setup.py
-__pycache__/__init__.cpython-310.pyc
-__pycache__/solr_troubleshooting.cpython-310.pyc
-__pycache__/stsf.cpython-310.pyc
+stsf/__init__.py
 stsf/stsf.py
 stsf.egg-info/PKG-INFO
 stsf.egg-info/SOURCES.txt
