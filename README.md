@@ -32,7 +32,7 @@ import stsf
 
 # Example usage: check Solr ping
 solr_url = "http://localhost:8983/solr"
-if solr_troubleshooting.check_solr_ping(solr_url):
+if stsf.check_solr_ping(solr_url):
     print("Solr server is responding.")
 else:
     print("Solr server is not responding.")
