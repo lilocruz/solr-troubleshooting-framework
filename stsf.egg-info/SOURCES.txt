@@ -1,0 +1,10 @@
+README.md
+setup.py
+stsf/__init__.py
+stsf/stsf.py
+stsf.egg-info/PKG-INFO
+stsf.egg-info/SOURCES.txt
+stsf.egg-info/dependency_links.txt
+stsf.egg-info/requires.txt
+stsf.egg-info/top_level.txt
+test/test.py
